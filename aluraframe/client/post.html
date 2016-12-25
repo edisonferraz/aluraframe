@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Negociações</title>
@@ -11,8 +12,8 @@
 
         <div class="form-group">
             <label for="data">Data</label>
-            <input type="date" id="data" class="form-control" required autofocus/>        
-        </div>    
+            <input type="date" id="data" class="form-control" required autofocus/>
+        </div>
 
         <div class="form-group">
             <label for="quantidade">Quantidade</label>
@@ -21,14 +22,14 @@
 
         <div class="form-group">
             <label for="valor">Valor</label>
-            <input id="valor" type="number" class="form-control"  min="0.01" step="0.01" value="0.0" required />
+            <input id="valor" type="number" class="form-control" min="0.01" step="0.01" value="0.0" required />
         </div>
 
         <button class="btn btn-primary" type="submit" onclick="sendPost(event)">Enviar dados para servidor</button>
-    </form>
+</form>
 
-    <script src="js/app/services/HttpService.js"></script>
-    <script>
+<script src="js/app/services/HttpService.js"></script>
+<script>
         function sendPost(event) {
 
             event.preventDefault();
@@ -60,4 +61,5 @@
         }
     </script>
 </body>
+
 </html>

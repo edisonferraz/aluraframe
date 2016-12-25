@@ -27,10 +27,10 @@ var ConnectionFactory = (function () {
 
         openRequest.onsuccess = e => {
 
-          if (connection) {
+          if (!connection) {
             connection = e.target.result;
             close = connection.close.bind(connection);
-            connection.close() = function() {
+            connection.close = () => {
               throw new Error('Você não pode fechar diretamente a conexão');
             }
           }
